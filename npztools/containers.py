@@ -11,6 +11,30 @@ PYTHON 2/3
 """
 
 
+def add_to_npz(npzfile, allow_pickle=False, **kwargs):
+    """
+    add onei or more field(s) to an existing npzfile (implies loading the existing fields)
+    :param npzfile: name of the file to load and write 
+    :param kwargs: fields to add or update
+    """
+    if os.path.isfile(npzfile):
+
+        # load if not in kwargs
+        keys = kwargs.keys()
+        with np.load(npzfile) as loader:
+            loaded = {f: loader[f] for f in loader.files if f not in keys}
+
+        # concatenate
+        d = dict(loaded, **kwargs)
+        
+    else:
+        d = kwargs
+
+    # save
+    # np.savez(npzfile, **d)
+    _savez(npzfile, args=(), kwds=d, compress=True, allow_pickle=allow_pickle)
+
+
 def loadkeys_from_npz(npzfilename, keys=None, allow_pickle=False):
     """
     :param npzfilename:
