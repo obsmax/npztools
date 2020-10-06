@@ -1,6 +1,7 @@
 from __future__ import print_function
 import numpy as np
 from numpy.lib.npyio import _savez
+import os
 
 """
 a generalized object to store processing results under conventional npz files

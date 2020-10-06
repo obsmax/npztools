@@ -15,4 +15,6 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="",
     packages=setuptools.find_packages(),
-    scripts=["npztools/bin/npzinfo"])
+    scripts=["npztools/bin/npzinfo",
+             "npztools/bin/npyinfo",
+             "npztools/bin/npzshow"])

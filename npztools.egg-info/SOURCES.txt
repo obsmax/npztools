@@ -1,6 +1,7 @@
 setup.py
 npztools/__init__.py
 npztools/containers.py
+npztools/npyinfo.py
 npztools/npzinfo.py
 npztools/version.py
 npztools.egg-info/PKG-INFO
