@@ -3,9 +3,13 @@ npztools/__init__.py
 npztools/containers.py
 npztools/npyinfo.py
 npztools/npzinfo.py
+npztools/npzshow.py
 npztools/version.py
 npztools.egg-info/PKG-INFO
 npztools.egg-info/SOURCES.txt
 npztools.egg-info/dependency_links.txt
+npztools.egg-info/requires.txt
 npztools.egg-info/top_level.txt
+npztools/bin/npyinfo
 npztools/bin/npzinfo
+npztools/bin/npzshow
