@@ -77,13 +77,13 @@ class Container(dict):
     Subclass may attach some displaying methods of file format control methods
     """
 
-    def __new__(cls, **kwargs):
-        """
-        :param kwargs: ignored here, passed to __init__ for affectation
-        :return:
-        """
-        container_instance = super(Container, cls).__new__(cls, {})
-        return container_instance
+    # def __new__(cls, **kwargs):
+    #     """
+    #     :param kwargs: ignored here, passed to __init__ for affectation
+    #     :return:
+    #     """
+    #     container_instance = super(Container, cls).__new__(cls, {})
+    #     return container_instance
 
     def __init__(self, **kwargs):
         """use __new__ to subclass, not __init__"""
