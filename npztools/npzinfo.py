@@ -18,13 +18,16 @@ def shapeformat(shape):
 
 
 def sizeformat(size):
+    if size == 0:
+        return "0"
+
     n = 0
     bkmg = []
     while size and n < 4:
         bkmg.append(int(size % 1024))
         size = size // 1024
         n += 1
-    return str(bkmg[-1]) + " KMG"[len(bkmg)-1]
+    return str(bkmg[-1]) + " KMG"[len(bkmg) - 1]
 
 
 def npzinfo(npzfile, long=False):

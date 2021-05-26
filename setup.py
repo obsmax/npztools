@@ -31,4 +31,5 @@ setuptools.setup(
     install_requires=['numpy', 'matplotlib'],
     scripts=["npztools/bin/npzinfo",
              "npztools/bin/npyinfo",
+             "npztools/bin/npyshow",
              "npztools/bin/npzshow"])
